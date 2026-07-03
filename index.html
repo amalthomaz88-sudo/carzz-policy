@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carzz - Legal Portal</title>
+    <style>
+        :root {
+            --bg-color: #0b0c10;
+            --container-bg: #1f2833;
+            --text-color: #c5c6c7;
+            --text-highlight: #ffffff;
+            --accent-color: #ff5722; /* Hot orange/red matching Carzz theme */
+            --accent-hover: #ff7043;
+            --border-color: #45f3ff; /* Cyan accent border */
+            --tab-inactive: #0b0c10;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(180deg, #1f2833 0%, #0b0c10 100%);
+            border-bottom: 2px solid rgba(255, 87, 34, 0.3);
+        }
+
+        header h1 {
+            color: var(--text-highlight);
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            color: var(--accent-color);
+            margin: 5px 0 0 0;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Tab Layout */
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid var(--container-bg);
+            margin-bottom: 20px;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 15px;
+            background-color: var(--tab-inactive);
+            color: var(--text-color);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-align: center;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .tab-btn:hover {
+            color: var(--text-highlight);
+            background-color: rgba(255, 87, 34, 0.1);
+        }
+
+        .tab-btn.active {
+            background-color: var(--container-bg);
+            color: var(--accent-color);
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        /* Content Sections */
+        .content-section {
+            display: none;
+            background-color: var(--container-bg);
+            padding: 30px;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        h2, h3 {
+            color: var(--text-highlight);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            color: var(--accent-color);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: var(--accent-hover);
+        }
+
+        .info-box {
+            background-color: rgba(255, 87, 34, 0.1);
+            border-left: 4px solid var(--accent-color);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: rgba(197, 198, 199, 0.5);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>CARZZ</h1>
+        <p>Legal &amp; Agreement Portal</p>
+    </header>
+
+    <div class="container">
+        <!-- Tab Headers -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab(event, 'privacy')">Privacy Policy</button>
+            <button class="tab-btn" onclick="openTab(event, 'terms')">Terms &amp; Conditions</button>
+        </div>
+
+        <!-- Privacy Policy Content -->
+        <div id="privacy" class="content-section active">
+            <h2>Privacy Policy</h2>
+            <p><strong>Last Updated:</strong> July 3, 2026</p>
+            <p>"Carzz" (referred to as "the Game") is a voice-controlled mobile game developed as a general audience application. This Privacy Policy is used to inform players regarding our policies with the collection, use, and disclosure of Personal Information if anyone decides to play our game.</p>
+            <p>If you choose to use our Game, then you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the service. We will not use or share your information with anyone except as described in this Privacy Policy.</p>
+
+            <div class="info-box">
+                <h3>🎙️ Special Microphone Usage Disclosure</h3>
+                <p>Our Game features unique voice-controlled gameplay mechanics where players can raise their voice pitch to accelerate or stay quiet to slow down.</p>
+                <ul>
+                    <li><strong>Local Processing only:</strong> Access to the microphone is strictly used for real-time local audio amplitude and frequency calculations inside the Game.</li>
+                    <li><strong>No Recording or Transmission:</strong> We do <strong>not</strong> record, store, transmit, or share any audio data, voice data, or sound recordings from your device's microphone. All audio analysis happens instantaneously in memory on your physical device.</li>
+                </ul>
+            </div>
+
+            <h3>1. Information Collection and Use</h3>
+            <p>For a better experience, while using our Game, we may require you to provide us with certain personally identifiable information, including but not limited to device identifiers. The information that we request will be retained on your device and is not collected by us in any way.</p>
+
+            <h3>2. Third-Party Services</h3>
+            <p>The Game does use third-party services that may collect information used to identify you. Below are links to the privacy policies of the third-party service providers used by the Game:</p>
+            <ul>
+                <li><a href="https://policies.google.com/privacy" target="_blank">Google Play Services</a></li>
+                <li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank">Google AdMob (Ads)</a></li>
+                <li><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank">Unity In-App Purchasing (IAP)</a></li>
+            </ul>
+
+            <h3>3. Log Data</h3>
+            <p>We want to inform you that whenever you use our Game, in a case of an error in the app, we collect data and information (through third-party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing our Game, the time and date of your use of the service, and other statistics.</p>
+
+            <h3>4. Cookies</h3>
+            <p>Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device's internal memory.</p>
+            <p>This Game does not use these “cookies” explicitly. However, the game may use third-party code and libraries that use “cookies” to collect information and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this service.</p>
+
+            <h3>5. Security</h3>
+            <p>We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
+
+            <h3>6. Children’s Privacy</h3>
+            <p>These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to do necessary actions.</p>
+
+            <h3>7. Contact Us</h3>
+            <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at: <a href="mailto:ziyaacademyedu@gmail.com">ziyaacademyedu@gmail.com</a></p>
+        </div>
+
+        <!-- Terms & Conditions Content -->
+        <div id="terms" class="content-section">
+            <h2>Terms &amp; Conditions</h2>
+            <p><strong>Last Updated:</strong> July 3, 2026</p>
+            <p>By downloading, installing, or using the mobile application "Carzz" (referred to as "the Game"), you are agreeing to be bound by these Terms &amp; Conditions. If you do not agree to these terms, please do not download, install, or use the Game.</p>
+
+            <h3>1. Description of Service</h3>
+            <p>"Carzz" is a mobile racing game utilizing voice input (microphone sensitivity/pitch detection) as a control mechanism. The game is free-to-play with optional in-app purchases (IAP) to unlock virtual currency (coins) and remove advertising.</p>
+
+            <h3>2. Privacy Policy &amp; Microphone Input</h3>
+            <p>Your use of the Game is also governed by our Privacy Policy. By playing the Game, you acknowledge and agree that:</p>
+            <ul>
+                <li>The Game accesses your device's microphone solely for real-time control mechanics.</li>
+                <li>Audio signals are analyzed locally on your device in real-time memory and are <strong>never</strong> recorded, stored, or transmitted to any server.</li>
+            </ul>
+
+            <h3>3. In-App Purchases (IAP) &amp; Virtual Currency</h3>
+            <ul>
+                <li><strong>Virtual Coins:</strong> The Game includes virtual currency (coins) which can be earned during gameplay or purchased with real money.</li>
+                <li><strong>Final Sale:</strong> All purchases of virtual currency and digital items (e.g., removing ads) are final and non-refundable, except as required by applicable law or the platform terms (Google Play Store refund policies).</li>
+                <li><strong>No Real-World Value:</strong> Coins are virtual goods and hold no real-world monetary value. They cannot be redeemed, sold, or exchanged for real currency.</li>
+            </ul>
+
+            <h3>4. Third-Party Advertisements</h3>
+            <p>The Game contains ads served via Google AdMob. By using the Game, you agree to receive advertisements. You may remove interstitial advertisements by purchasing the "Remove Ads" in-app purchase.</p>
+
+            <h3>5. Intellectual Property</h3>
+            <p>All content, graphics, source code, game mechanics, and trademarks associated with "Carzz" are the exclusive property of the developer. You may not copy, reverse engineer, modify, or redistribute the Game or any of its assets without prior written consent.</p>
+
+            <h3>6. Limitation of Liability</h3>
+            <p>The Game is provided "AS IS" and "AS AVAILABLE" without any warranties of any kind. To the maximum extent permitted by law, the developer shall not be liable for any direct, indirect, incidental, or consequential damages arising out of your use or inability to use the Game.</p>
+
+            <h3>7. Governing Law</h3>
+            <p>These Terms &amp; Conditions shall be governed by and construed in accordance with the laws of your country, without regard to its conflict of law provisions.</p>
+
+            <h3>8. Contact Information</h3>
+            <p>For any questions regarding these Terms &amp; Conditions, please contact us at: <a href="mailto:ziyaacademyedu@gmail.com">ziyaacademyedu@gmail.com</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Carzz Game Developer. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, content, tablinks;
+            content = document.getElementsByClassName("content-section");
+            for (i = 0; i < content.length; i++) {
+                content[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
